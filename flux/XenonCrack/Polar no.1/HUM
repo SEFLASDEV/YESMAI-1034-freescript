@@ -142,7 +142,7 @@ function Flux:Window(bottom, mainclr, toclose)
     Title.Position = UDim2.new(0.097560972, 0, 0.0475206636, 0)
     Title.Size = UDim2.new(0, 111, 0, 34)
     Title.Font = Enum.Font.GothamBold
-    Title.Text = "IHEREHUb"
+    Title.Text = "YESMAI#1034"
     Title.TextColor3 = Color3.fromRGB(255, 255, 255)
     Title.TextSize = 20.000
     Title.TextXAlignment = Enum.TextXAlignment.Left
