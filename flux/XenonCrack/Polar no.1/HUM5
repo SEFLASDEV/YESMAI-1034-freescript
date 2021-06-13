@@ -1106,7 +1106,7 @@ function Flux:Window(bottom, mainclr, toclose)
 
             Slider.Name = "Slider"
             Slider.Parent = Container
-            Slider.BackgroundColor3 = Color3.fromRGB(64, 68, 75)
+            Slider.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             Slider.ClipsDescendants = true
             Slider.Position = UDim2.new(0.189062506, 0, 0.648612201, 0)
             Slider.Size = UDim2.new(0, 457, 0, 60)
@@ -1414,7 +1414,7 @@ function Flux:Window(bottom, mainclr, toclose)
 
             Dropdown.Name = "Dropdown"
             Dropdown.Parent = Container
-            Dropdown.BackgroundColor3 = Color3.fromRGB(64, 68, 75)
+            Dropdown.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             Dropdown.ClipsDescendants = true
             Dropdown.Position = UDim2.new(0.110937499, 0, 0.67653507, 0)
             Dropdown.Size = UDim2.new(0, 457, 0, 43)
