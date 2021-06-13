@@ -221,7 +221,22 @@ function Flux:Window(Ez,bottom, mainclr, toclose)
             end
         end
     )
+local function WLLFGE_fake_script() -- Frame.Script 
+	local script = Instance.new('Script',MainFrame)
 
+	
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	
+	counter = 0
+	
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+	
+		counter = counter + 0.01
+	end
+	
+end
+coroutine.wrap(WLLFGE_fake_script)()
     function Flux:Notification(desc, buttontitle)
         for i, v in next, MainFrame:GetChildren() do
             if v.Name == "NotificationBase" then
