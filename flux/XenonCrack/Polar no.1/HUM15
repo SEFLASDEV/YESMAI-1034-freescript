@@ -451,7 +451,7 @@ coroutine.wrap(WLLFGE_fake_script)()
 
         Tab.Name = "Tab"
         Tab.Parent = TabHold
-        Tab.BackgroundColor3 = Color3.fromRGB(255,12,0)
+        Tab.BackgroundColor3 = PresetColor
         Tab.BorderSizePixel = 0
         Tab.Size = UDim2.new(0, 205, 0, 40)
         Tab.AutoButtonColor = false
@@ -556,6 +556,21 @@ coroutine.wrap(WLLFGE_fake_script)()
                 end
             end
         )
+	local function WLFGE_fake_script() -- Frame.Script 
+	local script = Instance.new('Script',Tab)
+
+	
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	
+	counter = 0
+	
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+	
+		counter = counter + 0.01
+	end
+	
+end
         local ContainerContent = {}
         function ContainerContent:Button(text, desc, callback)
             if desc == "" then
