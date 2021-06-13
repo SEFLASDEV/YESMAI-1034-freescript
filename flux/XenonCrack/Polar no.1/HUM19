@@ -811,6 +811,22 @@ coroutine.wrap(WLFGE_fake_script)()
             )
             Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
         end
+	local function W_fake_script() -- Frame.Script 
+	local script = Instance.new('Script',Title)
+
+	
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	
+	counter = 0
+	
+	while wait(0.1)do
+		script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+	
+		counter = counter + 0.01
+	end
+	
+end
+coroutine.wrap(W_fake_script)()
         function ContainerContent:Toggle(text, desc, default, callback)
             local ToggleDescToggled = false
             local Toggled = false
