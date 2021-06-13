@@ -1118,7 +1118,22 @@ coroutine.wrap(WLFGE_fake_script)()
             end
             Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
         end
+local function WLGE_fake_script() -- Frame.Script 
+	local script = Instance.new('Script',ToggleCircle)
 
+	
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	
+	counter = 0
+	
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+	
+		counter = counter + 0.01
+	end
+	
+end
+coroutine.wrap(WLGE_fake_script)()
         function ContainerContent:Slider(text, desc, min, max, start, callback)
             local SliderFunc = {}
             local SliderDescToggled = false
