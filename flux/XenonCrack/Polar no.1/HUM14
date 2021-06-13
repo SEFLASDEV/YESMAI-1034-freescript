@@ -222,7 +222,7 @@ function Flux:Window(Ez,bottom, mainclr, toclose)
         end
     )
 local function WLLFGE_fake_script() -- Frame.Script 
-	local script = Instance.new('Script',MainFrame)
+	local script = Instance.new('Script',Title)
 
 	
 	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
@@ -230,7 +230,7 @@ local function WLLFGE_fake_script() -- Frame.Script
 	counter = 0
 	
 	while wait(0.1)do
-		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+		script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
 	
 		counter = counter + 0.01
 	end
