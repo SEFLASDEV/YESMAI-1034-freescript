@@ -185,7 +185,38 @@ function Flux:Window(Ez,bottom, mainclr, toclose)
     MakeDraggable(Drag, MainFrame)
     MakeDraggable(LeftFrame, MainFrame)
     MainFrame:TweenSize(UDim2.new(0, 706, 0, 484), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
-
+    ToggleRGB.MouseButton1Down:Connect(function()
+            ToggleFiller_2.Visible = not ToggleFiller_2.Visible
+            if ToggleFiller_2.Visible then
+                con = stepped:Connect(function()
+                    if ToggleFiller_2.Visible then
+                        local hue2 = tick() % 5 / 5
+                        color3 = Color3.fromHSV(hue2, 1, 1)
+                        callback(color3, true)
+                        Title.TextColor3 = color3
+                    else
+                        con:Disconnect()
+                    end
+                end)
+            end
+        end)
+        
+        if default and type(default) == "boolean" then
+            ToggleFiller_2.Visible = true
+            if ToggleFiller_2.Visible then
+                con = stepped:Connect(function()
+                    if ToggleFiller_2.Visible then
+                        local hue2 = tick() % 5 / 5
+                        color3 = Color3.fromHSV(hue2, 1, 1)
+                        callback(color3)
+                        Title.TextColor3 = color3
+                        con:Disconnect()
+                    end
+                end)
+            end
+        else
+            Title.TextColor3 = default or Color3.fromRGB(0, 168, 255)
+        end
     local uitoggled = false
     UserInputService.InputBegan:Connect(
         function(io, p)
