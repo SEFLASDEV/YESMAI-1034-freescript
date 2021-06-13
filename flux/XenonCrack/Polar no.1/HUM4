@@ -554,7 +554,7 @@ function Flux:Window(bottom, mainclr, toclose)
 
             Button.Name = "Button"
             Button.Parent = Container
-            Button.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+            Button.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             Button.ClipsDescendants = true
             Button.Position = UDim2.new(0.370312512, 0, 0.552631557, 0)
             Button.Size = UDim2.new(0, 457, 0, 43)
@@ -797,7 +797,7 @@ function Flux:Window(bottom, mainclr, toclose)
 
             Toggle.Name = "Toggle"
             Toggle.Parent = Container
-            Toggle.BackgroundColor3 = Color3.fromRGB(64, 68, 75)
+            Toggle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             Toggle.ClipsDescendants = true
             Toggle.Position = UDim2.new(0.110937506, 0, 0.67653507, 0)
             Toggle.Size = UDim2.new(0, 457, 0, 43)
